@@ -5,3 +5,7 @@ Converting an HP T520 into a Digital Signage device
 2. Launch HP ThinUpdate and click on "Download a thin client recovery image to local storage or a USB drive":
 
 <img alt="HP ThinUpdate" src="https://user-images.githubusercontent.com/94996203/181450685-8166da6a-83c2-454f-8f61-1aba2179f3d3.png" width="300">
+
+3. Choose "t520" for Platform. Choose "WES7" for Operating System. Choose "WES7E-32 Image 14WWETIE301 English (Sept 2017)" for Image. Lastly choose a target on your Hard drive to store the downloaded image and then click 'Download'.
+
+<img alt="HP ThinUpdate" src="https://user-images.githubusercontent.com/94996203/181452361-48f5c60c-e388-46c7-8c0c-8d8ea3c58c9e.png" width="300">
