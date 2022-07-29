@@ -14,3 +14,13 @@ Converting an HP T520 into a Digital Signage device
 5. Click 'Create an ISO from a thin client image'.
 6. Choose the .ibr image you downloaded previously and choose where to save the created .iso and then click 'Create'.
 7. When the ISO has been created, close HP ThinUpdate and use Rufus to create a bootable USB using the .iso you created.
+8. Plug the bootable USB into the T520, power it on and press the F9 key.
+9. Choose EUFI Bootable USB.
+10. Press 'Y' three times to overwrite the existing image.
+11. When complete, press 'S' to shutdown the T520 and then remove the bootable USB and power the T520 back on.
+12. Windows 7 Embedded Standard 7 will load and autologin to the default User account.
+13. Double click the green padlock (HPWF) on the task bar.
+14. Enter the password for the Administrator account (default is 'Administrator').
+15. Select 'Disable write filter' and then click on 'OK' and reboot.
+16. After the T520 has rebooted and autlogged back into the User account, press and hold Left Shift while clicking on Start and then Log off. Keep holding the Left Shift key until you see the 'Administrator' and 'User' accounts.
+17. Log on to the Administrator account using the default password Administrator.
