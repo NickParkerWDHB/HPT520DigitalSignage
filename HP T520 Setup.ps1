@@ -2,11 +2,11 @@ Set-Executionpolicy -Scope CurrentUser -ExecutionPolicy UnRestricted
 
 Clear-Host
 
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\Current Version\Winlogon" -Name "DefaultUserName" -Value "Administrator"  -PropertyType "String"
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\Current Version\Winlogon" -Name "DefaultPassword" -Value "Administrator"  -PropertyType "String"
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\Current Version\Winlogon" -Name "DefaultDomainName" -Value "Administrator"  -PropertyType "String"
-
 Set-Itemproperty -path 'HKLM:\Software\Microsoft\Windows NT\Current Version\Winlogon' -Name 'DefaultUserName' -value 'Administrator'
+Set-Itemproperty -path 'HKLM:\Software\Microsoft\Windows NT\Current Version\Winlogon' -Name 'ForceAutoLogon' -value '1'
+Set-Itemproperty -path 'HKLM:\Software\Microsoft\Windows NT\Current Version\Winlogon' -Name 'AutoAdminLogon' -value '1'
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\Current Version\Winlogon" -Name "DefaultPassword" -Value "Administrator"  -PropertyType "String"
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\Current Version\Winlogon" -Name "DisableLockWorkstation" -Value "1"  -PropertyType "DWord"
 
 Get-WmiObject -Class Win32_Product | Select-Object -Property Name
 
