@@ -8,7 +8,7 @@ clear
 do { 
     Write-Host "Waiting for active WiFi connection..." 
     Start-Sleep -Seconds 5 
-} until (Test-Connection $servername -Quiet -Count 1) 
+} until (Test-Connection $servername -Quiet -Count 1 -ErrorAction SilentlyContinue) 
 
 Write-Host "Wifi connection active."
 Write-Host "Moving mouse to the corner."
