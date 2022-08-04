@@ -32,6 +32,9 @@ powercfg /SETACVALUEINDEX SCHEME_CURRENT SUB_NONE CONSOLELOCK 0
 Write-Output("Importing Daily Restart Scheduled Task")
 Start-Process "C:\Scripts\Import Scheduled Task.bat"
 
+Write-Output("Copying Start-Up Shortcut")
+Copy-Item -Path "C:\Scripts\Launch Screen Shortcut.lnk" -Destination "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\"
+
 $Apps = @('HP Easy Shell', 'HP System Information', 'Foxit PhantomPDF', 'HP ThinUpdate')
 
 foreach ($app in $Apps)
