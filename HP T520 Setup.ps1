@@ -10,6 +10,17 @@ Set-Itemproperty -path 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlo
 Set-Itemproperty -path 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon' -Name 'DefaultPassword' -value 'Administrator'
 New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" -Name "DisableLockWorkstation" -Value "1"  -PropertyType "DWord"
 
+Write-Output("Enabling Windows Administrator logins in TeamViewer")
+Set-Itemproperty -path 'HKLM:\Software\TeamViewer' -Name 'Security_WinLogin' -value '1'
+
+Write-Output("Removing Desktop Icons")
+Remove-Item "C:\Users\Public\Desktop\*.*"
+
+Write-Output("Removing TaskBar Icons")
+Remove-Item "C:\Users\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\*.*"
+Remove-Item "C:\Users\Administrator\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\*.*"
+Remove-Item "C:\Users\Administrator\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\*.*"
+
 Write-Output("Setting Power Plan to Balanced")
 $PowerPlan = Get-WmiObject -Namespace root\cimv2\power -Class Win32_PowerPlan -Filter "ElementName = 'Balanced'"
 $PowerPlan.Activate()
