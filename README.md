@@ -24,3 +24,7 @@ Converting an HP T520 into a Digital Signage device
 15. Select 'Disable write filter' and then click on 'OK' and reboot.
 16. After the T520 has rebooted and autlogged back into the User account, press and hold Left Shift while clicking on Start and then Log off. Keep holding the Left Shift key until you see the 'Administrator' and 'User' accounts.
 17. Log on to the Administrator account using the default password Administrator.
+
+
+- Unblock the .ps1 files
+- Change Chrome hardware acceleration setting
