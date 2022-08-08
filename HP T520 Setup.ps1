@@ -20,6 +20,12 @@ Write-Output("Removing TaskBar Icons")
 Remove-Item "C:\Users\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\*.*"
 Remove-Item "C:\Users\Administrator\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\*.*"
 Remove-Item "C:\Users\Administrator\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\*.*"
+Remove-Item -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Taskband -Force
+
+Write-Output("Disable Chrome Hardware Acceleration setting")
+New-Item -Path HKLM:\Software\Policies -Name Google -Force
+New-Item -Path HKLM:\Software\Policies\Google -Name Chrome -Force
+New-ItemProperty -Path "HKLM:\Software\Policies\Google\Chrome" -Name "HardwareAccelerationModeEnabled" -Value "0"  -PropertyType "DWord"
 
 Write-Output("Setting Power Plan to Balanced")
 $PowerPlan = Get-WmiObject -Namespace root\cimv2\power -Class Win32_PowerPlan -Filter "ElementName = 'Balanced'"
