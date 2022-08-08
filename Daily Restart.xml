@@ -2,7 +2,7 @@
 <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
   <RegistrationInfo>
     <Date>2022-08-04T19:39:14.273579</Date>
-    <Author>HP-CCKHG3FOG5QJ\Administrator</Author>
+    <Author>Administrator</Author>
   </RegistrationInfo>
   <Triggers>
     <CalendarTrigger>
@@ -15,7 +15,7 @@
   </Triggers>
   <Principals>
     <Principal id="Author">
-      <UserId>HP-CCKHG3FOG5QJ\Administrator</UserId>
+      <UserId>Administrator</UserId>
       <LogonType>InteractiveToken</LogonType>
       <RunLevel>LeastPrivilege</RunLevel>
     </Principal>
