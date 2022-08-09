@@ -27,6 +27,11 @@ New-Item -Path HKLM:\Software\Policies -Name Google -Force
 New-Item -Path HKLM:\Software\Policies\Google -Name Chrome -Force
 New-ItemProperty -Path "HKLM:\Software\Policies\Google\Chrome" -Name "HardwareAccelerationModeEnabled" -Value "0"  -PropertyType "DWord"
 
+Write-Output("Unblock the Launch Screen.PS1 file")
+#This only works in Powershell 3+
+#Unblock-File -Path "C:\Scripts\Launch Screen.ps1"
+start-process "C:\Scripts\Unblock_File.bat"
+
 Write-Output("Setting Power Plan to Balanced")
 $PowerPlan = Get-WmiObject -Namespace root\cimv2\power -Class Win32_PowerPlan -Filter "ElementName = 'Balanced'"
 $PowerPlan.Activate()
@@ -60,3 +65,18 @@ foreach ($app in $Apps)
 		$MyApp = Get-WmiObject -Class Win32_Product | Where-Object{$_.Name -eq $app}
 		$MyApp.Uninstall()
 	}
+
+#Uninstall CyberLink Media+ Player 10
+#Uninstall CitrixReceiver 4.7
+#Uninstall VMware Horizon Client - REBOOT
+#Uninstall HPDM Agent 32-bit
+#Uninstall HP Write Manager
+#Uninstall HP Velocity
+#Uninstall HP Documentation
+#Uninstall Broadcom 802.11 Wireless LAN Adapter - REBOOT
+#Uninstall Broadcom Wireless Utility
+#Uninstall Broadcom Bluetooth Software
+#Uninstall HP USB Port Manager
+#Uninstall PL-2303 USB-to-Serial
+#Uninstall Intel PROSet/Wireless Software - NB - this will clear any saved wireless profiles
+#Uninstall Intel Wireless Bluetooth - REBOOT
