@@ -1,0 +1,1 @@
+netsh wlan add profile filename="C:\Scripts\Wireless Network Config - SWA.xml" "user=all"
