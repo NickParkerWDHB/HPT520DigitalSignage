@@ -26,5 +26,5 @@ Converting an HP T520 into a Digital Signage device
 17. Log on to the Administrator account using the default password Administrator.
 
 
-- Unblock the .ps1 files
-- Change Chrome hardware acceleration setting
+- Power settings to last state
+- Boot order to HDD first for UEFI and Legacy
