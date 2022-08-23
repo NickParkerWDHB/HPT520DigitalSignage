@@ -1,7 +1,7 @@
 Add-Type -AssemblyName System.Windows.Forms
 
 $servername = '192.0.2.1'
-$url = 'https://docs.google.com/presentation/d/e/2PACX-1vQYaVmzpXHweH2NFD1Apxe3CPZSBzsXCwAHpnvF9yAwcB-pW920XRjUXozn8nl9XH3xmgnF500t9PdI/pub?start=true&loop=true&delayms=10000'
+$url = 'https://docs.google.com/presentation/d/e/2PACX-1vTIBJH17eRGSVDetSxmeEe6ly0C-6N8EIqXv03q2K4IOCSlaLcgkfZi1FtuUYniGS7LZEtxSvQVa_4C/pub?start=true&loop=true&delayms=10000'
 
 clear
 
